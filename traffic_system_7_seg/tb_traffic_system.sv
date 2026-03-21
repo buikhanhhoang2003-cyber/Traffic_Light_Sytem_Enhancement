@@ -29,12 +29,7 @@ module tb_traffic_system;
     wire system_ready;
 
     // Instantiate DUT (Device Under Test)
-    top_traffic_system #(
-        .CLK_FREQ(50_000_000),
-        .RED_DUR(RED_DUR),
-        .GREEN_DUR(GREEN_DUR),
-        .YELLOW_DUR(YELLOW_DUR)
-    ) dut (
+    top_traffic_system #(.CLK_FREQ(50_000_000), .RED_DUR(RED_DUR), .GREEN_DUR(GREEN_DUR),.YELLOW_DUR(YELLOW_DUR)) dut (
         .clk(clk),
         .rst_n(rst_n),
         .mode(mode),

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Mar  6 11:34:09 2026
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : traffic_counter_display
+Top-level Entity Name : top_traffic_system
+Family : Cyclone IV E
+Total logic elements : 980
+    Total combinational functions : 978
+    Dedicated logic registers : 77
+Total registers : 77
+Total pins : 30
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

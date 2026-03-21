@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at traffic_counter_display.sv(395): always construct contains both blocking and non-blocking assignments File: /home/bui-khanh-hoang/Desktop/Traffic_Light_Sytem_Enhancement/traffic_system_7_seg/traffic_counter_display.sv Line: 395
