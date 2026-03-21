@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Mar 21 21:16:30 2026
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : traffic-light-with-control
+Top-level Entity Name : seg_count_test
+Family : Cyclone IV E
+Total logic elements : 115
+    Total combinational functions : 115
+    Dedicated logic registers : 57
+Total registers : 57
+Total pins : 14
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

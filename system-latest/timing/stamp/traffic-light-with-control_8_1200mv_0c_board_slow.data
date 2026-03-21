@@ -1,0 +1,167 @@
+/*
+ Copyright (C) 2020  Intel Corporation. All rights reserved.
+ Your use of Intel Corporation's design tools, logic functions 
+ and other software and tools, and any partner logic 
+ functions, and any output files from any of the foregoing 
+ (including device programming or simulation files), and any 
+ associated documentation or information are expressly subject 
+ to the terms and conditions of the Intel Program License 
+ Subscription Agreement, the Intel Quartus Prime License Agreement,
+ the Intel FPGA IP License Agreement, or other applicable license
+ agreement, including, without limitation, that your use is for
+ the sole purpose of programming logic devices manufactured by
+ Intel and sold by Intel or its authorized distributors.  Please
+ refer to the applicable agreement for further details, at
+ https://fpgasoftware.intel.com/eula.
+*/
+MODELDATA
+/*MODELDATA HEADER*/
+/*
+ This file contains Slow Corner delays for the design using part EP4CE6E22C8
+ with speed grade 8, core voltage 1.2V, and temperature 0 Celsius
+
+*/
+DESIGN "traffic-light-with-control";
+TIMESCALE "1ns";
+
+
+
+
+
+TIMINGDATA
+
+ARCDATA
+pos_clk__SVNSEG_DIG[0]__delay:
+CELL_RISE( scalar ) {
+VALUES ("8.462");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("8.462");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_clk__SVNSEG_DIG[1]__delay:
+CELL_RISE( scalar ) {
+VALUES ("8.096");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("8.096");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_clk__SVNSEG_DIG[2]__delay:
+CELL_RISE( scalar ) {
+VALUES ("10.475");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("10.475");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_clk__SVNSEG_DIG[3]__delay:
+CELL_RISE( scalar ) {
+VALUES ("9.269");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("9.269");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_clk__SVNSEG_SEG[0]__delay:
+CELL_RISE( scalar ) {
+VALUES ("11.270");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("11.270");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_clk__SVNSEG_SEG[1]__delay:
+CELL_RISE( scalar ) {
+VALUES ("11.863");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("11.863");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_clk__SVNSEG_SEG[2]__delay:
+CELL_RISE( scalar ) {
+VALUES ("11.388");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("11.388");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_clk__SVNSEG_SEG[3]__delay:
+CELL_RISE( scalar ) {
+VALUES ("11.269");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("11.269");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_clk__SVNSEG_SEG[4]__delay:
+CELL_RISE( scalar ) {
+VALUES ("11.597");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("11.597");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_clk__SVNSEG_SEG[5]__delay:
+CELL_RISE( scalar ) {
+VALUES ("11.309");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("11.309");
+}
+
+ENDARCDATA
+
+ARCDATA
+pos_clk__SVNSEG_SEG[6]__delay:
+CELL_RISE( scalar ) {
+VALUES ("11.433");
+}
+
+CELL_FALL( scalar ) {
+VALUES ("11.433");
+}
+
+ENDARCDATA
+
+ENDTIMINGDATA
+
+ENDMODELDATA
