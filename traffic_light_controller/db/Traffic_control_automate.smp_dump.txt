@@ -1,0 +1,17 @@
+
+State Machine - |traffic_light_top|traffic_fsm:u_fsm|state
+Name state.BLINK_RED state.ALLRED_4 state.B_L_YELLOW state.B_LEFT state.ALLRED_3 state.B_S_YELLOW state.B_STRAIGHT state.ALLRED_2 state.A_L_YELLOW state.A_LEFT state.ALLRED_1 state.A_S_YELLOW state.A_STRAIGHT state.FAIL_SAFE 
+state.FAIL_SAFE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.A_STRAIGHT 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.A_S_YELLOW 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ALLRED_1 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.A_LEFT 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.A_L_YELLOW 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.ALLRED_2 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.B_STRAIGHT 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.B_S_YELLOW 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.ALLRED_3 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.B_LEFT 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.B_L_YELLOW 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.ALLRED_4 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.BLINK_RED 1 0 0 0 0 0 0 0 0 0 0 0 0 1 

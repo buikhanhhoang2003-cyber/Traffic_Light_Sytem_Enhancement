@@ -1,0 +1,133 @@
+# =============================================================================
+# traffic_light_top.qsf
+# Project  : 4-Way Dual-Ring Traffic Light Controller
+# Device   : EP4CE6E22C8
+# Family   : Cyclone IV E
+# Package  : PQFP144
+# Clock    : 50MHz @ PIN_23
+# Reset    : Active LOW @ PIN_24 (signal name: rst_n)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Global Assignments
+# -----------------------------------------------------------------------------
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY traffic_light_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 21.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "00:00:00 JANUARY 01 2025"
+set_global_assignment -name LAST_QUARTUS_VERSION "21.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+
+# -----------------------------------------------------------------------------
+# Source Files
+# -----------------------------------------------------------------------------
+set_global_assignment -name SYSTEMVERILOG_FILE traffic_light_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE traffic_fsm.sv
+set_global_assignment -name SYSTEMVERILOG_FILE conflict_monitor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE clk_div.sv
+
+# -----------------------------------------------------------------------------
+# Unused Pin Handling
+# -----------------------------------------------------------------------------
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS OUTPUT DRIVING GROUND"
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+
+# -----------------------------------------------------------------------------
+# Timing & Compilation Settings
+# -----------------------------------------------------------------------------
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+set_global_assignment -name SDC_FILE traffic_light_top.sdc
+
+# =============================================================================
+# PIN LOCATION ASSIGNMENTS
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Clock & Reset
+# PIN_23 = clk | PIN_24 = rst_n
+# -----------------------------------------------------------------------------
+set_location_assignment PIN_23 -to clk
+set_location_assignment PIN_24 -to rst_n
+
+# -----------------------------------------------------------------------------
+# North Straight (Group 1)
+# PIN_28 = G | PIN_31 = Y | PIN_33 = R
+# -----------------------------------------------------------------------------
+set_location_assignment PIN_28 -to led_N_G
+set_location_assignment PIN_31 -to led_N_Y
+set_location_assignment PIN_33 -to led_N_R
+
+# -----------------------------------------------------------------------------
+# North Left Turn (Group 5)
+# PIN_30 = G | PIN_32 = Y | PIN_34 = R
+# -----------------------------------------------------------------------------
+set_location_assignment PIN_30 -to led_NL_G
+set_location_assignment PIN_32 -to led_NL_Y
+set_location_assignment PIN_34 -to led_NL_R
+
+# -----------------------------------------------------------------------------
+# South Straight (Group 3)
+# PIN_44 = G | PIN_49 = Y | PIN_51 = R
+# -----------------------------------------------------------------------------
+set_location_assignment PIN_44 -to led_S_G
+set_location_assignment PIN_49 -to led_S_Y
+set_location_assignment PIN_51 -to led_S_R
+
+# -----------------------------------------------------------------------------
+# South Left Turn (Group 6)
+# PIN_46 = G | PIN_50 = Y | PIN_52 = R
+# -----------------------------------------------------------------------------
+set_location_assignment PIN_46 -to led_SL_G
+set_location_assignment PIN_50 -to led_SL_Y
+set_location_assignment PIN_52 -to led_SL_R
+
+# -----------------------------------------------------------------------------
+# East Straight (Group 2)
+# PIN_55 = G | PIN_59 = Y | PIN_64 = R
+# -----------------------------------------------------------------------------
+set_location_assignment PIN_55 -to led_E_G
+set_location_assignment PIN_59 -to led_E_Y
+set_location_assignment PIN_64 -to led_E_R
+
+# -----------------------------------------------------------------------------
+# East Left Turn (Group 7)
+# PIN_58 = G | PIN_65 = Y | PIN_60 = R
+# -----------------------------------------------------------------------------
+set_location_assignment PIN_58 -to led_EL_G
+set_location_assignment PIN_65 -to led_EL_Y
+set_location_assignment PIN_60 -to led_EL_R
+
+# -----------------------------------------------------------------------------
+# West Straight (Group 4)
+# PIN_68 = G | PIN_70 = Y | PIN_72 = R
+# -----------------------------------------------------------------------------
+set_location_assignment PIN_68 -to led_W_G
+set_location_assignment PIN_70 -to led_W_Y
+set_location_assignment PIN_72 -to led_W_R
+
+# -----------------------------------------------------------------------------
+# West Left Turn (Group 8)
+# PIN_69 = G | PIN_71 = Y | PIN_73 = R
+# -----------------------------------------------------------------------------
+set_location_assignment PIN_69 -to led_WL_G
+set_location_assignment PIN_71 -to led_WL_Y
+set_location_assignment PIN_73 -to led_WL_R
+
+# -----------------------------------------------------------------------------
+# Spare Pins — assign PIN_XX when hardware is ready
+# -----------------------------------------------------------------------------
+# set_location_assignment PIN_XX -to ns_sensor
+# set_location_assignment PIN_XX -to ew_sensor
+# set_location_assignment PIN_XX -to emergency_trigger
+# set_location_assignment PIN_XX -to system_fault_led
+
+# =============================================================================
+# END OF FILE
+# =============================================================================
